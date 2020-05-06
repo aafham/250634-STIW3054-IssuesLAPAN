@@ -8,7 +8,7 @@ public class MethodReference {
         t2.start();
     }
     public static void thread1Even(){
-        long start =System.currentTimeMillis();
+        long start = System.currentTimeMillis();
         for(int i=0; i<10; i+=2) {
             System.out.println(Thread.currentThread().getName()+": "+i);
             try {
@@ -18,7 +18,7 @@ public class MethodReference {
             }
         }
         long end =System.currentTimeMillis();
-        System.out.println("Execution Time = "+(end-start)/1000+"s");
+        System.out.printf("Time of execution = %d ms\n", (end - start));
     }
 
     public static void thread2Odd(){
